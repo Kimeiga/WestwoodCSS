@@ -1,0 +1,42 @@
+{
+  "name": "water.css",
+  "version": "1.0.0",
+  "description": "A just-add-css collection of styles to make simple websites just a little nicer.",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp style",
+    "dev": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kognise/water.css.git"
+  },
+  "keywords": [
+    "css",
+    "css-framework",
+    "simple",
+    "minimal"
+  ],
+  "author": "Kognise",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kognise/water.css/issues"
+  },
+  "homepage": "https://github.com/kognise/water.css",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.3",
+    "chalk": "^2.4.2",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-bytediff": "^1.0.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "browserslist": [
+    "defaults AND not android 4.4.3"
+  ]
+}
