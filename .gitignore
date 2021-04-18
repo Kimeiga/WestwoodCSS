@@ -85,7 +85,3 @@ typings/
 
 # IntelliJ IDE
 .idea/
-
-# Output of yarn build
-out/
-dist/
