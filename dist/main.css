@@ -1,15 +1,20 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,600;1,400;1,600&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+html {
+  scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+  scrollbar-width: thin;
+}
+
 body {
-  max-width: 800px;
-  margin: 20px auto;
   padding: 0 10px;
   color: var(--text-main);
-  background: var(--background);
+  background: var(--background-body);
   text-rendering: optimizeLegibility;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   transition: background-color var(--animation-duration) linear, border-color var(--animation-duration) linear, color var(--animation-duration) linear, box-shadow var(--animation-duration) linear, transform var(--animation-duration) ease;
 }
 
@@ -143,18 +148,21 @@ pre > code {
 }
 
 button,
-input[type='submit'],
-input[type='button'],
-input[type='checkbox'] {
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"] {
   cursor: pointer;
 }
 
-input:not([type='checkbox']):not([type='radio']),
+input:not([type="checkbox"]):not([type="radio"]),
 select {
   display: block;
 }
 
-input, select, button, textarea {
+input,
+select,
+button,
+textarea {
   color: var(--form-text);
   background-color: var(--background-alt);
   font-family: inherit;
@@ -163,12 +171,19 @@ input, select, button, textarea {
   margin-bottom: 6px;
   padding: 10px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   outline: none;
 }
 
-input:not([type='checkbox']):not([type='radio']),
-select, button, textarea {
+button,
+input {
+  border-radius: 20px;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+select,
+button,
+textarea {
   -webkit-appearance: none;
 }
 
@@ -179,14 +194,23 @@ textarea {
   resize: vertical;
 }
 
-button, input[type='submit'], input[type='button'] {
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
   padding-right: 30px;
   padding-left: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Poppins";
+  font-size: 90%;
+  color: white;
+  background: var(--links);
 }
 
 button:hover,
-input[type='submit']:hover,
-input[type='button']:hover {
+input[type="submit"]:hover,
+input[type="button"]:hover {
   background: var(--button-hover);
 }
 
@@ -197,20 +221,12 @@ textarea:focus {
   box-shadow: 0 0 0 2px var(--focus);
 }
 
-input[type='checkbox']:active,
-input[type='radio']:active,
-input[type='submit']:active,
-input[type='button']:active,
-button:active {
-  transform: translateY(2px);
-}
-
 input:disabled,
 select:disabled,
 button:disabled,
 textarea:disabled {
   cursor: not-allowed;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 ::-moz-placeholder {
@@ -240,7 +256,7 @@ textarea:disabled {
 }
 
 /* HEADER */
-header {
+.header {
   padding: 20px;
   text-align: center;
 }
@@ -291,7 +307,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   padding: 6px;
   text-align: left;
 }
@@ -307,6 +324,11 @@ tbody tr:nth-child(even) {
 ::-webkit-scrollbar {
   height: 10px;
   width: 10px;
+}
+
+html {
+  scrollbar-color: var(--scrollbar-thumb) var(--background-alt);
+  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar-track {
@@ -586,20 +608,20 @@ a[href^='sms']::before {
 
 :root {
   --background-body: #fff;
-  --background: #efefef;
-  --background-alt: #f7f7f7;
+  --background: #bdbdbd;
+  --background-alt: #ebebeb;
   --selection: #9e9e9e;
-  --text-main: #4B4B4B;
+  --text-main: #4b4b4b;
   --text-bright: #151515;
   --text-muted: #999;
-  --links: #1E6CFF;
-  --focus: #1E6CFFab;
+  --links: #1e6cff;
+  --focus: #1e6cffab;
   --border: #dbdbdb;
   --code: #000;
   --animation-duration: 0.1s;
   --button-hover: #ddd;
-  --scrollbar-thumb: color-mod(var(--button-hover) lightness(-3%));
-  --scrollbar-thumb-hover: color-mod(var(--button-hover) lightness(-10%));
+  --scrollbar-thumb: var(--text-muted);
+  --scrollbar-thumb-hover: var(--background);
   --form-placeholder: #949494;
   --form-text: #000;
   --variable: #39a33c;
